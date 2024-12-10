@@ -101,6 +101,17 @@
         brick.kill();
         score += 10;
         scoreText.setText(`Points: ${score}`);
+
+        let count_alive = 0;
+        for (let i = 0; i < bricks.children.length; i++) {
+          if (bricks.children[i].alive) {
+            count_alive++;
+          }
+        }
+        if (count_alive === 0) {
+          alert('YOU WIN');
+          location.reload();
+        }
       }
     </script>
   </body>
