@@ -18,7 +18,12 @@
         create,
         update,
       });
-      function preload() {}
+      function preload() {
+        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        game.scale.pageAlignHorizontally = true;
+        game.scale.pageAlignVertically = true;
+        game.stage.backgroundColor = '#f2c9c9';
+      }
       function create() {}
       function update() {}
     </script>
